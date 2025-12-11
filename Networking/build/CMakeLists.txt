@@ -7,21 +7,19 @@ set(INC ../include)
 
 # find packages
 
-
-# includes
-include_directories(
-  ${INC}
-)
-
-
 # find header & source
 # file(GLOB_RECURSE HEADER "include/*.h")
 # file(GLOB_RECURSE SOURCE "src/*.cpp")
 
 add_library(${NetworkLibrary} STATIC
-  ${SRC}/Socket.cpp
+${SRC}/Client.cpp
+${SRC}/Socket.cpp
 )
 
+# includes
+target_include_directories(${NetworkLibrary} PUBLIC
+  ${INC}
+)
 # install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 # source_group("Header include" FILES ${HEADER})

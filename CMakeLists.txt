@@ -8,12 +8,11 @@ set(ServerTarget "ServerExecutable")
 # find packages
 
 
-# # includes
-# include_directories(
-#   include
-# )
+# includes
+include_directories(".")
 
 add_subdirectory(Networking/build)
+
 
 # find header & source
 # file(GLOB_RECURSE HEADER "include/*.h")
@@ -27,12 +26,11 @@ add_executable(${ServerTarget}
 ServerExecutable.cpp
 )
 
-
-target_link_libraries(${ClientTarget}
+target_link_libraries(${ClientTarget} PUBLIC
   NetworkLibrary
 )
 
-target_link_libraries(${ServerTarget}
+target_link_libraries(${ServerTarget} PUBLIC
   NetworkLibrary
 )
 
