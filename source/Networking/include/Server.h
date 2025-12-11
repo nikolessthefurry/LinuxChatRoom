@@ -66,7 +66,7 @@ class Server
 private:
 
   /// Instance of the server socket.
-  Socket::Socket m_server_socket;
+  Socket m_server_socket;
 
   /// Array of connections.
   std::array<int, MAX_NUMBER_OF_CLIENTS> m_client_array;
