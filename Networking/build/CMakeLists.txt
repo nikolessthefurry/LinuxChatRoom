@@ -13,6 +13,7 @@ set(INC ../include)
 
 add_library(${NetworkLibrary} STATIC
 ${SRC}/Client.cpp
+${SRC}/Server.cpp
 ${SRC}/Socket.cpp
 )
 
@@ -20,7 +21,8 @@ ${SRC}/Socket.cpp
 target_include_directories(${NetworkLibrary} PUBLIC
   ${INC}
 )
-# install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+# install(TARGETS ${PROJECT_NAME} RfUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 # source_group("Header include" FILES ${HEADER})
 # source_group("Source src"     FILES ${SOURCE})

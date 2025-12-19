@@ -9,8 +9,9 @@
 /// 
 ////////////////////////////////////////////////////////////////////////////////
 
+#include "Networking_Constants.h"
+
 #include <sys/socket.h>
-#include <cstdint>
 
 namespace Networking
 {
@@ -76,7 +77,7 @@ public:
 private:
 
   /// Socket File Descriptor Attribute.
-  int m_socket_fd;
+  int32_t m_socket_fd;
 
   /// Is this socket connected.
   bool m_connected;

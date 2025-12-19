@@ -11,8 +11,8 @@
 
 #include "Socket.h"
 
-#include <cstdint>
 #include <array>
+#include <arpa/inet.h>
 
 namespace Networking
 {
@@ -22,6 +22,7 @@ const uint32_t MAX_NUMBER_OF_CLIENTS = 10;
 
 class Server
 {
+public:
   ////////////////////////////////////////////////////////////////////////////////
   /// @brief Construct a new Server object
   /// 
@@ -66,9 +67,12 @@ class Server
 private:
 
   /// Instance of the server socket.
-  Socket m_server_socket;
+  Socket m_socket;
+
+  /// The server's address
+  struct sockaddr_in m_server_address;
 
   /// Array of connections.
-  std::array<int, MAX_NUMBER_OF_CLIENTS> m_client_array;
+  std::array<int32_t, MAX_NUMBER_OF_CLIENTS> m_client_array;
 };
 }

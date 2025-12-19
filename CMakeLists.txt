@@ -13,11 +13,6 @@ include_directories(".")
 
 add_subdirectory(Networking/build)
 
-
-# find header & source
-# file(GLOB_RECURSE HEADER "include/*.h")
-# file(GLOB_RECURSE SOURCE "src/*.cpp")
-
 add_executable(${ClientTarget}
 ClientExecutable.cpp
 )

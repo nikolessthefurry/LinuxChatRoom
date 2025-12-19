@@ -11,7 +11,6 @@
 
 #include "Socket.h"
 
-#include <cstdint>
 #include <array>
 #include <arpa/inet.h>
 

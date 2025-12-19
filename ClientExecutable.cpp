@@ -26,6 +26,8 @@ int main(int argc, char* argv[])
 
   sockaddr_in server_to_connect_to = {};
 
+  server_to_connect_to.sin_port = htons(Networking::DEFAULT_SERVER_PORT_TO_USE);
+
   server_to_connect_to.sin_family = AF_INET;
 
   if (1 != inet_pton(AF_INET, connection_ip.c_str(), &server_to_connect_to.sin_addr))

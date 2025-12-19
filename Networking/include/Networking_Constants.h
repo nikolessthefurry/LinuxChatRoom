@@ -1,22 +1,20 @@
 ////////////////////////////////////////////////////////////////////////////////
-/// @file ClientExecutable.cpp
+/// @file Networking_Constants.h
 /// @author nikolessthefurry (nikolessthefurry@gmail.com)
 /// @brief 
 /// @version 0.1
-/// @date 2025-12-10
+/// @date 2025-12-19
 /// 
 /// @copyright Copyright (c) 2025
 /// 
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <iostream>
 #include <cstdint>
-#include <memory>
 
-#include "Server.h"
-
-////////////////////////////////////////////////////////////////////////////////
-int main(int argc, char* argv[])
+namespace Networking
 {
-  std::unique_ptr<Networking::Server> server = std::make_unique<Networking::Server>();
+
+/// Create a default port for the server to use.
+const uint32_t DEFAULT_SERVER_PORT_TO_USE = 1337;
+
 }
